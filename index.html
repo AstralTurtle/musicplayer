@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>I play song badly</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<h1 id="songTitle">Phases of My Life</h1>
+		<audio
+			controls
+			src="./music/05 Sofasound - Phases Of My Life.wav"
+			id="audioTrack1"></audio>
+		<div id="playpausediv">
+			<button id="play">Play</button>
+			<button id="pause">Pause</button>
+		</div>
+		<button id="playRandom">Skip</button>
+		<div class="volumediv">
+			<input
+				type="range"
+				min="0"
+				max="100"
+				value="25"
+				class="slider"
+				id="volume" />
+		</div>
+		<script src="index.js"></script>
+	</body>
+</html>
