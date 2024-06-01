@@ -1,14 +1,12 @@
 {
-	"name": "fileplayer",
-	"version": "1.0.0",
-	"description": "",
-	"main": "main.js",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"author": "",
-	"license": "ISC",
-	"devDependencies": {
-		"electron": "^26.2.2"
-	}
+  "name": "fileplayer",
+  "version": "0.0.2",
+  "description": "A simple music player",
+  "author": "AstralTurtle",
+  "main": "main.js",
+  "packageManager": "yarn@4.0.1",
+  "devDependencies": {
+    "electron": "^26.2.2",
+    "electron-builder": "24.6.4"
+  }
 }

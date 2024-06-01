@@ -8,36 +8,36 @@ musicArr = [];
 
 window.getMusic.send();
 
-window.getMusic.recieve((response) => {
-	musicArr = response;
+window.getMusic.receive((response) => {
+  musicArr = response;
 });
 
 window.onload = () => {
-	audioTrack.play();
+  audioTrack.play();
 };
 
 function playPause() {
-	if (audioTrack.paused) {
-		audioTrack.play();
-		play.style.display = "none";
-		pause.style.display = "block";
-	} else {
-		audioTrack.pause();
-		play.style.display = "block";
-		pause.style.display = "none";
-	}
-	console.log(musicArr);
+  if (audioTrack.paused) {
+    audioTrack.play();
+    play.style.display = "none";
+    pause.style.display = "block";
+  } else {
+    audioTrack.pause();
+    play.style.display = "block";
+    pause.style.display = "none";
+  }
+  console.log(musicArr);
 }
 
 const volume = () => {
-	audioTrack.volume = volumeSlider.value / 200;
+  audioTrack.volume = volumeSlider.value / 200;
 };
 
 function playRandom() {
-	songPath = musicArr[Math.floor(Math.random() * musicArr.length)];
-	audioTrack.src = songPath;
-	audioTrack.play();
-	songTitle.innerHTML = songPath.split("/")[2].split(".")[0];
+  songPath = musicArr[Math.floor(Math.random() * musicArr.length)];
+  audioTrack.src = songPath;
+  audioTrack.play();
+  songTitle.innerHTML = songPath.split("/")[2].split(".wav")[0];
 }
 
 controldiv.addEventListener("click", playPause);
